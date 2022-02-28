@@ -9,6 +9,8 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
 
+import com.google.common.collect.*;
+
 public class TrainSystemTest {
 
 	TrainController controller;
@@ -56,5 +58,16 @@ public class TrainSystemTest {
 
 		int a = system.newFeatureFunction(1);
 		Assert.assertEquals(1, a);
+	}
+
+	@Test
+	public void GuavaTest() {
+		Table<String, Integer, Integer> table = HashBasedTable.create();
+
+		table.put("currentTime", 0, 0);
+		table.put("joystickPosition", 1, 0);
+		table.put("referenceSpeed", 2, 0);
+
+		Assert.assertTrue(0 < table.size());
 	}
 }
