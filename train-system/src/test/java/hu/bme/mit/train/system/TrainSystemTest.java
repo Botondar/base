@@ -55,6 +55,6 @@ public class TrainSystemTest {
 		TrainSystem system = new TrainSystem();
 
 		int a = system.newFeatureFunction(1);
-		Assert.assertEquals(2, a);
+		Assert.assertEquals(1, a);
 	}
 }
