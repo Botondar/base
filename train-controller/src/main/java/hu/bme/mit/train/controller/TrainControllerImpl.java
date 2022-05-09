@@ -13,7 +13,7 @@ public class TrainControllerImpl extends TimerTask implements TrainController{
 
 	public TrainControllerImpl(){
 		timer = new Timer();
-		timer.schedule(this,1000,1000);
+		timer.scheduleAtFixedRate(this,1000,1000);
 	}
 
 	@Override
